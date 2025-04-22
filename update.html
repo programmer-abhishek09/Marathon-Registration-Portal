@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update Your Info</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 15px;
+    }
+
+    h2 {
+      color: white;
+      margin-bottom: 30px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .update-section {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 25px;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .update-section h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    input {
+      background-color: rgba(255,255,255,0.9);
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    @media screen and (max-width: 480px) {
+      .update-section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🛠️ Update Your Account Details</h2>
+
+  <!-- Update Phone Number -->
+  <form class="update-section" action="update.php" method="POST">
+    <h3>Update Phone Number</h3>
+    <input type="email" name="email" placeholder="Your current email" required>
+    <input type="text" name="phone" placeholder="New phone number" required>
+    <button type="submit" name="updatePhone">Update Phone</button>
+  </form>
+
+  <!-- Update Email -->
+  <form class="update-section" action="update.php" method="POST">
+    <h3>Update Email</h3>
+    <input type="email" name="email" placeholder="Your current email" required>
+    <input type="email" name="new_email" placeholder="New email" required>
+    <button type="submit" name="updateEmail">Update Email</button>
+  </form>
+
+  <!-- Update Password -->
+  <form class="update-section" action="update.php" method="POST">
+    <h3>Update Password</h3>
+    <input type="email" name="email" placeholder="Your current email" required>
+    <input type="password" name="new_password" placeholder="New password" required>
+    <button type="submit" name="updatePassword">Update Password</button>
+  </form>
+
+</body>
+</html>
